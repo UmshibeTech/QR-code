@@ -21,5 +21,8 @@ with the phone. A `localhost` QR code only works on the computer itself.
 
 The QR-code library is loaded from a CDN, so an internet connection is needed
 for QR generation. For a public, shareable QR code, publish the page to a web
-host and use its HTTPS address. The “Copy Website Link” button copies the
-official website at <https://umshibetech.github.io/website/>.
+host and use its HTTPS address. This repository deploys the page to GitHub Pages
+when changes are pushed to `main`; after deployment, open
+<https://umshibetech.github.io/QR-code/qrcode.html>. Its QR code then points to
+that public page. The “Copy Website Link” button copies the official website at
+<https://umshibetech.github.io/website/>.
