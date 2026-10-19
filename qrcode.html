@@ -210,14 +210,10 @@
   <script>
     const qrContainer = document.getElementById("qrcode");
     const status = document.getElementById("status");
-    const socialPageURL = window.location.href;
+    const socialPageURL = "https://umshibetech.github.io/QR-code/qrcode.html";
     const websiteURL = "https://umshibetech.github.io/website/";
-    const isPublished = ["http:", "https:"].includes(window.location.protocol);
 
-    if (!isPublished) {
-      status.textContent =
-        "Publish this page online to create a QR code that works on other devices.";
-    } else if (typeof QRCode === "undefined") {
+    if (typeof QRCode === "undefined") {
       status.textContent =
         "The QR code could not load. Check your internet connection and reload the page.";
     } else {
@@ -236,9 +232,8 @@
       const canvas = qrContainer.querySelector("canvas");
 
       if (!canvas) {
-        status.textContent = isPublished
-          ? "QR code is not available yet. Please reload the page and try again."
-          : "Publish this page online before downloading its QR code.";
+        status.textContent =
+          "QR code is not available yet. Check your internet connection and reload the page.";
         return;
       }
 
